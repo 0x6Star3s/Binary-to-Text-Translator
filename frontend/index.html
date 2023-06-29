@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/df42f94cf4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+        <form class="calc" name="calcform" autocomplete="off">
+            <div id="unitnav" class="form-row">
+                <div class="form-group col" style="margin-right: .5rem;">
+                    <label for="unit1">From</label>
+                    <select id="unit1" class="form-control">
+                        <option value="binary">Binary</option>
+                        <option value="text" selected>Text</option>
+                    </select>
+                </div>
+                <div class="form-group col">
+                <label for="unit2">To</label>
+                    <select id="unit2" class="form-control">
+                        <option value="binary" selected>Binary</option>
+                        <option value="text">Text</option>
+                        </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <h3 id="label1" for="txt">Paste text </h3>
+                <textarea id="textarea1" name="txt" rows="6" cols="60" class="form-control" autofocus></textarea>
+            </div>
+
+            <div class="form-group center">
+                <button 
+                type="button" 
+                title="Swap conversion" 
+                class="btn btn-secondary" 
+                onclick="reverseText()"
+            > <i class="fa-solid fa-retweet"></i></button>
+
+            </div>
+
+            
+            <div class="form-group">
+                <h3 id="label2" for="txt">Paste binary</h3>
+                <textarea id="textarea2"  name="bin" rows="6" cols="60" class="form-control" readonly ></textarea>
+            </div>
+            <div class="form-group">
+                <button 
+                    type="button" 
+                    title="Convert" 
+                    class="btn btn-success" 
+                    onclick="convertValue()"
+                ><i class="fa-regular fa-paper-plane"></i></button>
+                <button 
+                    type="reset" 
+                    title="Reset" 
+                    class="btn btn-secondary" 
+                    onclick="reset()"
+                >Reset</button>
+        </form>
+
+    </main>
+    
+    <script src="./scrypt.js"></script>
+</body>
+</html>
+
